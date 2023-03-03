@@ -4,7 +4,10 @@ import data.TasksList;
 import storage.Storage;
 import ui.Ui;
 
-public class ByeCommand extends Command {
+/**
+ * Represents "bye" command - exists program when executed
+ */
+public class ByeCommand extends Command{
     @Override
     public boolean isExit() {
         return true;

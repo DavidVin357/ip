@@ -6,9 +6,15 @@ import storage.Storage;
 import tasks.Task;
 import ui.Ui;
 
-public class AddCommand extends Command {
+/**
+ * Represents "add" command - creates generic task when executed
+ */
+public class AddCommand extends Command{
     String name;
 
+    /**
+     * @param name
+     */
     public AddCommand(String name) {
         this.name = name;
     }

@@ -6,9 +6,15 @@ import storage.Storage;
 import tasks.Task;
 import ui.Ui;
 
-public class DeleteCommand extends Command {
+/**
+ * Represents "delete" command - removes given task by its index from the list when executed
+ */
+public class DeleteCommand extends  Command {
     int taskIndex;
 
+    /**
+     * @param taskIndex
+     */
     public DeleteCommand(int taskIndex) {
         this.taskIndex = taskIndex;
     }

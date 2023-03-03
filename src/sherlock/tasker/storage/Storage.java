@@ -14,12 +14,25 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * A class that loads tasks from the given file at the beginning
+ * and writes tasks to the same file in the end
+ */
 public class Storage {
     private String filepath;
-
+    /**
+     * @param filepath
+     */
     public Storage(String filepath) {
         this.filepath = filepath;
     }
+
+    /**
+     * @param ui
+     * @return list of tasks
+     * @throws SherlockException
+     */
+
     public TasksList loadTasks(Ui ui) throws SherlockException {
         TasksList tasksList = new TasksList();
         try {
@@ -73,6 +86,11 @@ public class Storage {
         }
     }
 
+    /**
+     * Writes tasks to the given file
+     * @param tasksList list of tasks
+     * @throws SherlockException
+     */
     public void writeToFile(TasksList tasksList) throws SherlockException {
         try {
             FileWriter fw = new FileWriter(this.filepath);

@@ -8,6 +8,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeParseException;
 
 public class Parser {
+    /**
+     * Parses typed command
+     * @param fullCommand
+     * @return one of the existing Command classes
+     * @throws SherlockException
+     */
     public Command parse(String fullCommand) throws SherlockException {
         try {
             String[] inputArray = fullCommand.split("\\s+", 2);

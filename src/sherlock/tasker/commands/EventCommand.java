@@ -6,10 +6,19 @@ import storage.Storage;
 import tasks.Event;
 import ui.Ui;
 
+/**
+ * Represents "event" command - creates event task when executed
+ */
 public class EventCommand extends Command {
     String name;
     String from;
     String to;
+
+    /**
+     * @param name
+     * @param from
+     * @param to
+     */
     public EventCommand(String name, String from, String to) {
         this.name = name;
         this.from = from;

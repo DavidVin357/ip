@@ -6,9 +6,15 @@ import storage.Storage;
 import tasks.Todo;
 import ui.Ui;
 
+/**
+ * Represents "todo" command - creates todo task when executed
+ */
 public class TodoCommand extends Command {
     String name;
 
+    /**
+     * @param arguments
+     */
     public TodoCommand(String arguments) {
         this.name = arguments;
     }
