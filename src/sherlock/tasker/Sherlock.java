@@ -5,18 +5,10 @@ import data.exceptions.SherlockException;
 import storage.Storage;
 import ui.Ui;
 
-/**
- * Core class of the Sherlock program
- */
 public class Sherlock {
     private Storage storage;
     private TasksList tasksList;
     private Ui ui;
-
-    /**
-     *
-     * @param filePath
-     */
     public Sherlock(String filePath) {
         ui = new Ui();
         storage = new Storage(filePath);
@@ -29,9 +21,6 @@ public class Sherlock {
         }
     }
 
-    /**
-     * Runs a Sherlock program
-     */
     public void run() {
         ui.showWelcome();
         boolean isExit = false;
@@ -47,11 +36,6 @@ public class Sherlock {
             }
         }
     }
-
-    /**
-     * Entry point - starts the Sherlock program
-     * @param args
-     */
     public static void main(String[] args) {
         new Sherlock("data/tasks.txt").run();
     }

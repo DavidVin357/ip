@@ -6,19 +6,11 @@ import storage.Storage;
 import tasks.Task;
 import ui.Ui;
 
-/**
- * Represents "mark" and "unmark" commands -
- * changes if the task is done or not given its index from the list
- */
 public class MarkCommand extends Command {
 
     private boolean isDone;
     private int taskIndex;
 
-    /**
-     * @param isDone
-     * @param taskIndex
-     */
     public MarkCommand(boolean isDone, int taskIndex) {
         this.taskIndex = taskIndex;
         this.isDone = isDone;

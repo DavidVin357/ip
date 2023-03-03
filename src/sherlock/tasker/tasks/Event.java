@@ -6,9 +6,7 @@ import parser.Parser;
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-/**
- * Represents Event task
- */
+
 public class Event extends Task{
     private LocalDateTime from;
     private LocalDateTime to;
@@ -23,16 +21,6 @@ public class Event extends Task{
         return "E";
     }
 
-    /**
-     * @param name
-     * @param isDone
-     * @param from start of event (dd-MM-yyyy HH:mm)
-     * @param to end of event (dd-MM-yyyy HH:mm)
-     */
-
-    /**
-     * @return String representation of the Event type
-     */
     @Override
     public String toString() {
         String from = this.from.format(DateTimeFormatter.ofPattern("dd MMM yyyy HH:mm"));
@@ -41,10 +29,6 @@ public class Event extends Task{
         return "[E]" + super.toString() + " (" + "from: " + from + "; to: " + to + ")";
     }
 
-    /**
-     *
-     * @return String representation of the event for the file output
-     */
     @Override
     public String getFileFormatString() throws SherlockException {
         try {
